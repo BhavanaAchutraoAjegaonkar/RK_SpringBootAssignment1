@@ -27,9 +27,8 @@ public class Test {
 
 		EmployeeDao empdao = new EmployeeDaoImpl();
 
-		EmployeeService empservice = new EmployeeServiceImpl(empdao);
-
-		EmployeeServiceRead empserviceread = new EmployeeServiceReadOnlyImpl(empdao);
+		EmployeeService empservice = ac.getBean(EmployeeService.class);
+		EmployeeServiceRead empserviceread = ac.getBean(EmployeeServiceRead.class);
 
 		String id;
 		String name;
