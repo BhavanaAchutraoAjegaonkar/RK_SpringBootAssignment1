@@ -39,11 +39,13 @@ public class ProductController {
 		es.saveEmployee(emp);
 
 	}
-	@RequestMapping("viewForm")
+	/*@RequestMapping("viewForm")
 	public String viewForm() {
 		return "emp";
 
-	}
+	}*/
+	
+	//Display Employee Data on Jsp page.
 	@RequestMapping("viewEmployee")
 	public String viewEmployee(Model model){
 		
