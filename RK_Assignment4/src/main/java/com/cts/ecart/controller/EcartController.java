@@ -105,6 +105,10 @@ public class EcartController {
 	@PostMapping("review") 
 	public Review saveNewReview (@RequestBody Review review) {
 
+		Customer customer=service.getUserById(review.getCustomer().getUserId());
+		Product product=service.getProductById(review.getProduct().getProductId());
+		review.setCustomer(customer);
+		review.setProduct(product);
 		return service.saveNewReview(review);
 
 	}
